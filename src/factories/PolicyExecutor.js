@@ -79,6 +79,7 @@ PolicyExecutor.prototype = {
    * @returns {Promise}
    * @example
    * policyExecutor.execute('isLoggedIn', {someParam: 'someValue'});
+   * policyExecutor.execute(['isLoggedIn'], {someParam: 'someValue'});
    */
   execute(policies = [], data = {}) {
     if (!policies || !policies.length) {
