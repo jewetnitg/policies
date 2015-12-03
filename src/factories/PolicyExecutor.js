@@ -46,9 +46,10 @@ function PolicyExecutor(options = {}) {
 PolicyExecutor.prototype = {
 
   /**
+   * Adds one or more policies.
    *
-   * @param name {String|Object}
-   * @param predicate {Function<Promise>|undefined}
+   * @param name {String|Object} Name of the policy, or a hashmap of policies
+   * @param predicate {Function|undefined} Function that returns a promise
    * @example
    * policyExecutor.add('isLoggedIn', function (req) {...});
    * // or
