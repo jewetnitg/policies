@@ -1,13 +1,13 @@
-View
+Policies
 ============================
 
-This npm module serves as to make working with Views easier.
+This npm module introduces the concept of policies
 
 Adding it to a browserify project
 =================================
 
 ```
-npm install frontend-view --save
+npm install frontend-policies --save
 ```
 Alternatively the build can be downloaded <a href="build.tar.gz">here</a>
 

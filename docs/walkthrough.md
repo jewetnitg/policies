@@ -1,22 +1,16 @@
-If using browserify with riotify
 ```
-import View from 'frontend-view';
-import tag from '../path/to/a.tag';
-
-const SomeView = View({
-  tag
+const policyExecutor = PolicyExecutor({
+  policies: {
+    isLoggedIn(req) {
+      return sesison.user ? Promise.resolve() : Promise.reject();
+    }
+  }
 });
+
+session.user = false;
+policyExecutor.execute('isLoggedIn'); // rejects
+session.user = true;
+policyExecutor.execute('isLoggedIn'); // resolves
 ```
 
-if not using browserify
-
-```
-View.riot.compile('/tags/hello-world.tag', function() {
-  // the loaded tags are ready to be used
-  window.UserView = View({
-    tag: 'hello-world'
-  });
-});
-```
-
-for a full specification of the {@link View} class please refer to it's documentation.
+for a full specification of the {@link PolicyExecutor} class please refer to it's documentation.
