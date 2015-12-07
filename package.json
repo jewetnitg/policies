@@ -1,6 +1,6 @@
 {
   "name": "frontend-policies",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "frontend-policies serves to run asynchronous 'security' checks on the client.",
   "main": "index.js",
   "scripts": {
